@@ -5,8 +5,7 @@ import styles from "../styles/Home.module.css"
 import Nav from "../components/Nav"
 import Results from "../components/Results"
 import requests from "../Utils/requests"
-export default function Home(props) {
-  console.log(props)
+export default function Home({ results }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,7 +19,7 @@ export default function Home(props) {
       <Nav />
 
       {/* Results  */}
-      <Results />
+      <Results results={results} />
     </div>
   )
 }
@@ -35,7 +34,7 @@ export async function getServerSideProps(context) {
   ).then((res) => res.json())
   return {
     props: {
-      request: request.results,
+      results: request.results,
     },
   }
 }
