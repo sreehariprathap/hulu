@@ -10,7 +10,7 @@ export default function Home({ results }) {
     <div className={styles.container}>
       <Head>
         <title>Hulu</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Hulu-Logo.wine.png" />
       </Head>
 
       {/* Header  */}
